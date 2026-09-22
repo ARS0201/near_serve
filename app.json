@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "NearServe",
+    "slug": "nearserve",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": false,
+    "splash": {
+      "backgroundColor": "#5B4BDB",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#5B4BDB"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}

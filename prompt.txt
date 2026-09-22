@@ -1,0 +1,440 @@
+Build a complete mobile application called **NearServe – Local Service Booking App**.
+
+### 1. App Purpose
+
+NearServe is a local service booking mobile application that helps users discover nearby service providers, filter services according to their requirements, view service details, and book services.
+
+The application should have a clean, modern, professional mobile UI suitable for a college-level software project and hackathon presentation.
+
+The main idea is:
+
+**Discover → Filter → View Service → Book → Track Booking**
+
+---
+
+### 2. Technology Stack
+
+Use the following technologies:
+
+**Frontend**
+
+* React Native
+* Expo
+* TypeScript
+
+**Backend**
+
+* Node.js
+* Express.js
+
+**Database**
+
+* MySQL
+
+**API**
+
+* REST API using Express.js
+
+**Development**
+
+* VS Code / Antigravity
+* Git and GitHub
+
+Do not use Firebase as the main database.
+
+Keep the project structure clean so the frontend and backend can be developed separately.
+
+---
+
+### 3. Main Screens
+
+Create the following screens:
+
+1. Splash Screen
+2. Login
+3. Signup
+4. Home
+5. Discover Services
+6. Service Details
+7. Booking
+8. My Bookings
+9. Booking Details
+10. User Profile
+
+The navigation should be:
+
+**Splash → Login/Signup → Home**
+
+From Home:
+
+**Home → Discover → Service Details → Booking → Booking Confirmation**
+
+Also provide navigation to:
+
+**Home → My Bookings**
+
+and
+
+**Home → Profile**
+
+---
+
+### 4. Splash Screen
+
+Create a professional splash screen.
+
+Display:
+
+**NearServe**
+
+Tagline:
+
+**“Your Local Services, Just a Tap Away.”**
+
+Use a simple location/service-related icon.
+
+After a short delay, automatically navigate to the Login screen.
+
+Use a modern professional color scheme such as:
+
+* Primary: #5B4BDB
+* Secondary: #7C6CE8
+* Background: #F8F9FC
+* Dark text: #1F2937
+* Secondary text: #6B7280
+* White: #FFFFFF
+
+Make the UI clean and not overly colorful.
+
+---
+
+### 5. Login Screen
+
+Create:
+
+**NearServe**
+
+**Welcome Back!**
+
+Fields:
+
+* Email / Phone Number
+* Password
+
+Buttons:
+
+* Login
+* Forgot Password?
+* Create New Account
+
+Also provide basic validation.
+
+For now, connect Login to the backend API.
+
+After successful login:
+
+**Login → Home**
+
+Show appropriate error messages for invalid credentials.
+
+---
+
+### 6. Signup Screen
+
+Create a registration form containing:
+
+* Full Name
+* Email
+* Phone Number
+* Password
+* Confirm Password
+* Location
+
+Button:
+
+**Create Account**
+
+Validate:
+
+* Required fields
+* Valid email
+* Valid phone number
+* Password confirmation
+
+Send registration data to the Express.js backend.
+
+Store the user in MySQL.
+
+After successful signup:
+
+**Signup → Login**
+
+---
+
+### 7. Home Screen
+
+Create a modern dashboard.
+
+At the top:
+
+**Hello, [User Name] 👋**
+
+Search bar:
+
+**“What service do you need?”**
+
+Add service categories such as:
+
+* Plumbing
+* Electrical
+* Cleaning
+* AC Repair
+* Appliance Repair
+* Beauty & Salon
+* Home Painting
+* Car/Bike Service
+* Gardening
+* Computer Repair
+
+Add:
+
+**Nearby Services**
+
+Display service provider cards containing:
+
+* Service image/icon
+* Service name
+* Provider name
+* Rating
+* Distance
+* Starting price
+* Availability
+
+Each card should have:
+
+**View Details**
+
+button.
+
+Add a bottom navigation bar:
+
+**Home | Discover | Bookings | Profile**
+
+---
+
+### 8. Discover Screen
+
+This is an important screen.
+
+Create a search and filtering system.
+
+At the top:
+
+**Discover Local Services**
+
+Search bar:
+
+**“Search for services...”**
+
+Add a **Filter** button.
+
+Filters should include:
+
+### Service Category
+
+* Plumbing
+* Electrical
+* Cleaning
+* AC Repair
+* Appliance Repair
+* Beauty
+* Painting
+* Vehicle Service
+* Gardening
+* Computer Repair
+
+### Distance
+
+* Within 1 km
+* Within 3 km
+* Within 5 km
+* Within 10 km
+
+### Price Range
+
+Allow users to select a minimum and maximum price.
+
+### Rating
+
+* 4★ & above
+* 3★ & above
+
+### Availability
+
+* Available Now
+* Available Today
+* Available Tomorrow
+
+### Sort By
+
+* Distance
+* Rating
+* Price: Low to High
+* Price: High to Low
+
+After applying filters, display matching service providers.
+
+The filtering should work dynamically on the displayed services.
+
+---
+
+### 9. Service Details Screen
+
+When the user selects a service, display:
+
+* Service image
+* Service name
+* Provider name
+* Rating
+* Number of reviews
+* Distance
+* Starting price
+* Description
+* Services offered
+* Available time slots
+* Provider contact information
+
+Add:
+
+**Book Now**
+
+button.
+
+Also show:
+
+**Location / Service Area**
+
+The design should look like a professional service-booking application.
+
+---
+
+### 10. Booking Screen
+
+When the user clicks **Book Now**, open the booking screen.
+
+Display:
+
+**Book Service**
+
+Fields:
+
+* Selected Service
+* Selected Provider
+* Date
+* Time
+* Service Location
+* Additional Notes
+
+Allow the user to select an available date and time.
+
+Button:
+
+**Confirm Booking**
+
+Send the booking information to the backend.
+
+Store the booking in MySQL.
+
+---
+
+### 11. Booking Confirmation
+
+After successful booking, display:
+
+**Booking Confirmed! ✓**
+
+Show:
+
+* Booking ID
+* Service
+* Provider
+* Date
+* Time
+* Location
+* Estimated Price
+
+Button:
+
+**View Booking**
+
+and
+
+**Back to Home**
+
+---
+
+### 12. My Bookings Screen
+
+Display the user's bookings.
+
+Use tabs:
+
+**Upcoming | Completed | Cancelled**
+
+Each booking card should show:
+
+* Service
+* Provider
+* Date
+* Time
+* Status
+* Price
+
+Possible statuses:
+
+* Pending
+* Confirmed
+* In Progress
+* Completed
+* Cancelled
+
+Clicking a booking should open Booking Details.
+
+---
+
+### 13. Booking Details
+
+Display complete booking information:
+
+* Booking ID
+* Service
+* Provider
+* Date
+* Time
+* Location
+* Price
+* Booking status
+
+For upcoming bookings provide:
+
+**Cancel Booking**
+
+For completed bookings provide:
+
+**Rate Service**
+
+---
+
+### 14. Profile Screen
+
+Display:
+
+* Profile photo placeholder
+* User name
+* Email
+* Phone
+* Location
+
+Options:
+
+* Edit Prof
